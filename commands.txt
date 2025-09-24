@@ -1,0 +1,23 @@
+git clone git@github.com:williamyang3/qtm350-quiz01.git
+cd qtm350-quiz01
+git checkout -b feature-update
+mkdir -p reports
+echo "This document provides a summary of the project updates." > reports/summary.md
+git add reports
+git commit -m "Add reports directory"
+touch reports/file{1,2,3}.txt
+git mv data/raw-data.csv data/input-data.csv
+mkdir -p scripts/backup && cp scripts/*.py scripts/backup/
+rm docs/documentation.md
+git add -A
+git commit -m "Update project files"
+cat > .gitignore <<'GITIGNORE'
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+.DS_Store
+temp/
+dataset0?.csv
+GITIGNORE
+git add .gitignore && git commit -m "Add .gitignore file"
+# NOTE: Per instructor, all work stays on feature-update; no merge back to main here.
