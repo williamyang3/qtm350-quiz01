@@ -1,0 +1,14 @@
+git clone https//github.com/williamyang3/qtm350-quiz01.git
+cd qtm350-quiz01
+git remote add upstream https://github.com/danilofreire/qtm350-quiz01.git
+git remote -v 
+git branch
+git checkout -b feature-update
+git branch
+mkdir -p reports
+touch reports/summary.md
+echo "This document provides a summary of the project updates." > reports/summary.md
+git add reports
+git commit -m "Add reports directory"
+touch reports/file{1..3}.txt
+git mv data/raw-data.csv data/input-data.csv
