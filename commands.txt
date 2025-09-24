@@ -20,4 +20,3 @@ temp/
 dataset0?.csv
 GITIGNORE
 git add .gitignore && git commit -m "Add .gitignore file"
-# NOTE: Per instructor, all work stays on feature-update; no merge back to main here.
